@@ -1,0 +1,256 @@
+/*
+** This CSS styling file contains the CSS code for the popup modals such as the MoreInfoCard, the AddListing form,
+** and the Edit Listing form.
+*/
+/* Detail modal card's primary styling */
+.MoreInfoCard {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+ 
+}
+
+/* CSS styling editing buttons */
+.listingFunctions {
+  
+  /* CSS styling modal box */
+  float: left;
+
+  animation: slideRight 0.3s ease-in;
+
+  display: none;
+  position: relative;
+  border: 16px solid hsl(152, 48%, 59%);
+  background-color: rgb(209, 209, 209);
+  box-shadow: 7px 7px 15px hsl(152, 33%, 39%);
+  border-radius: 25px;
+  left: 0.5vw;
+  width: 8%;
+  height: 85vh;
+  bottom: 70px;
+
+  /* CSS styling for buttons */
+  .funcBtns {
+    display: none;
+    position: absolute;
+    width: 75%;
+    height: 10%;
+    top: 25vh;
+    left: 10%;
+    border: 20px;
+    border-radius: 30%;
+  }
+  .funcBtns:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transform: scale(0.95);
+  }
+  .funcBtns:active {
+      transform: scale(0.85);
+  }
+    /* End of CSS styling for buttons */
+}
+
+/* CSS styling for text and images inside the modal box */
+.moreInfoContent {
+  float: left;
+
+  /* CSS animation */
+  animation: slideUp 0.3s ease-in;
+
+  /* Primary CSS styling content box */
+  position: relative;
+  background-color: hsl(152, 48%, 59%);
+  box-shadow: 7px 7px 7px hsl(152, 33%, 39%);
+  border-radius: 25px;
+  margin-left: 10vw;
+  width: 65%;
+  height: 75%;
+
+  /* Title for the card */
+  .moreInfoHead {
+    padding: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgba(135, 0, 176, 0.949);
+  }
+   
+  /* CSS styling for Description */
+  .moreInfoDescription {
+    background-color: rgba(209, 209, 209, 1);
+    border: solid 18px rgba(209, 209, 209, 1);
+    border-radius: 5%;
+    position: absolute;
+    width: 350px;
+    right: 6%;
+    top: 12%;
+  }
+
+  /* CSS styling for image */
+  .detailImage {
+    max-width: 45%;
+    max-height: 60%;
+    border: solid 2px rgb(74, 79, 110);
+    position: absolute;
+    left: 6%;
+  }
+  /* CSS styling for pricing and stay duration information */
+  .pricingInfo {
+    text-align: left;
+    position: absolute;
+    left: 8%;
+    bottom: 2%;
+  }
+
+
+  /* CSS styling for amenities list part 1 and 2 */
+  .amenities {
+    position: absolute;
+    right: 30%;
+    bottom: 2%;
+
+    .amenDets {
+      margin-top: 5%;
+      text-align: left;
+    }
+  }
+
+  .amenities2 {
+    position: absolute;
+    right: 8%;
+    bottom: 2%;
+
+    .amenDets {
+      margin-top: 5%;
+      text-align: left;
+    }
+  }
+  .amenImage {
+    max-width: 20x;
+    max-height: 20px;
+  }
+  /* CSS styling for amenities end */
+}
+/* Button for closing the box */
+  .xClose {
+    position: absolute;
+    color: #0e0e0e;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    right: 8px;
+  }
+
+  .xClose:hover,
+  .xClose:focus {
+    color: #c64141;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .xClose:active {
+    transform: scale(0.7);
+  }
+/* End of CSS styling for X button */
+
+
+
+
+/* Primary CSS styling for the form box, both the add and edit listing forms. */
+.ListingForm {
+
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+
+  #formDiv {
+    /* Primary CSS styling content box */
+    position: relative;
+    border: 16px solid hsl(152, 48%, 59%);
+    background-color: rgb(209, 209, 209);
+    box-shadow: 7px 7px 7px hsl(152, 33%, 39%);
+    border-radius: 25px;
+    margin-top: -3vh;
+    margin-left: 15vw;
+    width: 65%;
+    height: 80%;
+    font-weight: 700;
+  }
+
+  
+  /* CSS styling left-hand fields */
+  .column1 {
+    position: relative;
+    float: left;
+    width: 50%;
+    
+  }
+  .fieldLabel {
+    display: flex;
+    font-size: 20px;
+    margin-left: 1vw;
+    margin-top: 2vh;
+  }
+  .inputField {
+    display: block;
+    margin-left: 5vw;
+    padding: 15px;
+    margin-top: 0.5vh;
+  }
+
+  /* CSS styling right-hand fields */
+  .column2 {
+    position: relative;
+    float: right;
+    width: 50%;
+  }
+  .fieldLabel2 {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    margin-top: 2vh;
+  }
+
+  .inputField2 {
+    position: relative;
+    display: block;
+    padding: 15px;
+    margin-left: 5vw;
+    margin-top: 0.5vh;
+  }
+
+  .amenities {
+    float: right;
+    margin-right: 15vw;
+  }
+  
+  #submitBtn  {
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
+    padding: 8px;
+  }
+
+}
+
+/* Sliding animations when opening. */
+  @keyframes slideUp {
+  from {bottom: -600px;}
+  to {bottom: 0px;}
+}
+
+@keyframes slideRight {
+  from {left: -180px;}
+  to {right: 0px;}
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "The Great Reef of Costa Rica",
+        "descrip":"A beautiful diving location for exploring colorful reefs and local fauna!",
+        "image": "reef1.jpg"
+    },
+    {
+        "title": "another title",
+        "descrip":"cool reef",
+        "image": "./assets/reef2.jpg"
+    }
+]

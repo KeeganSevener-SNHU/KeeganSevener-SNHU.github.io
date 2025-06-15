@@ -1,0 +1,137 @@
+/*
+** This CSS styling file contains the CSS code for the home page, the listing cards on the home page, 
+** and some default CSS styles for the root html doc.
+*/
+
+/* Default CSS styling settings */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(1, 1, 1, 0.87);
+  background-color: #ece9e9; /* background color for the whole page*/
+}
+
+/* HeaderCard CSS settings */
+.Header {
+  margin-top: 0px;
+  
+  background-color: hsl(152, 48%, 59%);
+  box-shadow: 2px 2px 2px hsl(152, 33%, 39%);
+  color: rgb(240, 192, 96);
+  text-shadow: 6px 6px 6px hsl(152, 33%, 39%);
+  height: 80px;
+  width: 100vw;
+
+  /* h1 text for the HeaderCard*/
+  .headerH1 {
+    display: inline;
+    position: relative;
+    top: 10px;
+    left: 25px;
+    font-size: 3.2em;
+    line-height: 1.1;
+    }
+    .headerH1:hover {
+      cursor: pointer;
+    }
+}
+/* logout button for the HeaderCard*/
+  #logOutBtn {
+    display: block;
+    position: relative;
+    font-size: large;
+    left: 93.5vw;
+    bottom: 30px;
+    color: hsla(225, 24%, 93%, 0.723);
+    border: 0px;
+    border-radius: 10px;
+    padding: 6px;
+  }
+  #logOutBtn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+/*listing card box settings */
+.listingCard {
+  position: relative;
+
+  border: 3px solid rgba(199, 199, 199, 0.885);
+  border-radius: 15px;
+  box-shadow: 6px 6px 6px rgba(57, 57, 57, 0.2);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  height: 400px;
+  width: 295px;
+  background-color: hsla(232, 89%, 75%, 0.478);
+}
+
+/*listing card image settings */
+.listingCard .listingImage {
+  position: absolute;
+  left: 35px;
+  top: 20px;
+  max-width: 80%;
+  border-radius: 100%;
+}
+
+/*listing card title settings */
+.listingCard .listingTitle {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  top: 195px;
+  color: rgba(135, 0, 176, 0.949);
+  font-size: 18px;
+}
+
+#previewDescrip {
+    position: absolute;
+    top: 280px;
+    font-style: italic;
+  }
+
+/*.listing card  button settings */
+.listingCard .ButtonBlock {
+  position: absolute;
+  text-align: right;
+  bottom: 8px;
+  right: 10px;
+}
+
+.listingCard .listingButton {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.25em 0.65em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/*.listing card button animation */
+.listingCard .listingButton:active {
+  transform: scale(0.9);
+}
+/*.listing card END of button settings */
+
+.footer {
+  place-items: center;
+  color: rgb(39, 147, 111);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: top;
+  min-width: 320px;
+  min-height: 100vh;
+}
