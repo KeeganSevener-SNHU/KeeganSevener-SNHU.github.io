@@ -22,7 +22,6 @@ layout: default
   <p>Outcome Four is met by the Travlr Getaways application’s utilization of best practices with industry tools such as the React libraries which are common for web development. The application makes good use of HTML, CSS, and JavaScript XML and React to more efficiently deliver the value of the original artifact in a more robust and innovative manner. There are no changes to my outcome-coverage plans. I still plan to meet outcomes Three and Five with the artifacts for Category Two and Category Three respectively. Category Three, Databases, will cover Outcome Five for developing a security mindset. Category Two: Algorithms and Data Structures will fulfill outcome Three with a solution to a given problem using algorithmic principles and computer science practices.</p>
   <br>
   <p><a href="https://github.com/KeeganSevener-SNHU/CS-465">Link to original artifact</a></p>
-  
   <p><a href="https://github.com/KeeganSevener-SNHU/CS465-Enhanced">Link to enhanced artifact</a></p>
   <h4>Enhancement Two</h4>
     <p>For enhancement Category Two, I chose an artifact from my SNHU class CS 300: Data Structure and Algorithms or DSA: Analysis and Design. This artifact was created in June of 2024, and it is a data structure program that stores bid objects that it generates using a CSV.
@@ -45,6 +44,27 @@ layout: default
     Link to enhanced artifact</a></p>
   
   <h4>Enhancement Three</h4>
-    <p> </p>
-<p>test text</p>
+    <p>
+      	The artifact for Category Three, Databases, is the same one from Category One. This artifact was created earlier this year for class CS 465, Full Stack Development I, at Southern New Hampshire University. The artifact is an administrative application that allows a user to create and update coral reef trip listings in a database and create user accounts. The application sends these requests to a server application programming interface, or API. The API is built in node.js and express. It is the changes to this API which communicates with a MongoDB database that my Category Three enhancements address.
+    </p>
+  <p>
+      I chose this artifact to showcase my ability to develop full fledged communications with databases and limit access to them based on user credentials. Originally, this artifact did not have full CRUD functionality which stands for create, read, update, delete. The original app allows users to view, create, and update new listings but not delete them. I added the delete ability to the enhanced artifact. Additionally, I created custom user roles for the database, so that accounts have roles associated with them. 
+  </p>
+  <p>
+    The role an account has determines what actions that the user can perform. This is known as role-based access control, or RBAC, and it is an authorization scheme. The original artifact had authentication which identifies users, but no authorization schemes to limit the scope of their access. I added an RBAC scheme to vet user authority and determine whether a request they make to the API will be accepted or rejected. I also enhance the artifact by forcing a user to make an account before they can even view the listings. Beforehand, you could just access the API and get a full list of coral reef listings without any authentication.
+  </p>
+  <p>
+    The RBAC scheme was also extended to the front-end developed in Category One for some additional redundant security. If a delete request is sent to the API, it will only perform that action of the user is an authenticated “reactAdmin”. If they do not have that role, then it is rejected. Adding RBAC to the front end takes this to the next level by not even showing the end user the delete button option if they do not have the correct role. Adding this functionality was made easier by updating the JSON Web Token to include user roles in its payload.
+  </p>
+  <p>
+    I have met the course outcome I planned to meet for Category Three, specifically outcome Five of developing a security mindset that addresses potential exploits in software and ensuring privacy and security of data and resources. The implementation of authorization through RBAC to limit access to certain controls like delete operations shows my ability to address design, logic, and structural security flaws. My extension of the authentication requirements to even read operations shows a security mindset, as I am anticipating other ways that people may try to access the API and by extension the database. I can limit what users see in the Travlr front-end, but API requests could be made through Postman or even just a browser tab. By extending the authentication requirements, these requests will be rejected as if they came from my own front-end. Thus, ensuring the level of privacy and security desired for my database.
+  </p>
+  <p>
+     When enhancing the artifact for Category Three, changes needed to be made to both the server API and the front-end React application. I learned to create custom roles within my MongoDB deployment. Upon the successful creation of these roles, I refactored the code for both my server API and the front-end React application to utilize these roles for RBAC. One of the features I was able to utilize for the RBAC controls on the front-end was the fall through principle for switch statements. Since certain roles simply get new functions in addition to lower roles’ abilities, I was able reduce the amount of code by having the switch cases fall through to enable all needed functionality. It is the first time I have found a use for the fall through principle for switch statements.  
+  </p>
+  <p>
+    I also learned how to add additional information to JWT payloads such as the roles array, which was easier than expected. I also learned which React libraries to use for decoding JWTs so that the front-end can make use of the server generated JWTs. When developing the API checks for user roles, I originally planned to create some intermediary functions that would be called before calling the CRUD functions on my API. I ran into some issues with those functions failing to stop the code from proceeding to the CRUD functions given how the controllers are designed. I realized it would be easier to simply put the checks within the CRUD functions and have them return a 401 response if the user did not have the proper authority. It was a good reminder that not everything needs to be compartmentalized. I got the same functionality that I expected, but with less code and just as much security. With RBAC enabled on both the front-end and the back-end, it is now impossible for a user to make any data requests from the MongoDB database unless they’ve been given explicit permission.  
+  </p>
+  <p><a href="https://github.com/KeeganSevener-SNHU/CS-465">Link to original artifact</a></p>
+  <p><a href="https://github.com/KeeganSevener-SNHU/CS465-Enhanced">Link to enhanced artifact</a></p>
 </body>
